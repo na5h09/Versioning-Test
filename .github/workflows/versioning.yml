@@ -20,6 +20,7 @@ env:
 
 jobs:
   install-gitversion:
+    runs-on: ubuntu-latest
     steps:
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7

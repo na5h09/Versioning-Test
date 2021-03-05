@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Install and Execute GitVersion
         run: |
-            dotnet tool install GitVersion.Tool --tool-path /home/runner/work/_temp/ed7ff5c4-b20b-4e3b-906b-c6648706f072 --version 5.6.6
+            dotnet tool install GitVersion.Tool --tool-path /home/runner/work/_temp/e1041d9c-2792-4def-b299-da2c12cbd370 --version 5.6.6
             dotnet-gitversion /home/runner/work/Versioning-Test/Versioning-Test /output json /output buildserver
 #      - name: Install GitVersion
 #        uses: gittools/actions/gitversion/setup@v0.9.7

@@ -22,10 +22,12 @@ jobs:
   install-gitversion:
     runs-on: ubuntu-latest
     steps:
-      - name: Install and Execute GitVersion
+      - name: Install GitVersion
         run: |
             dotnet tool install GitVersion.Tool --tool-path ${GITHUB_WORKSPACE} --version 5.6.6
-            dotnet-gitversion /home/runner/work/Versioning-Test/Versioning-Test /output json /output buildserver
+
+      - name: Execute GitVersion
+        run: dotnet-gitversion /home/runner/work/Versioning-Test/Versioning-Test /output json /output buildserver
 #      - name: Install GitVersion
 #        uses: gittools/actions/gitversion/setup@v0.9.7
 #        with:
